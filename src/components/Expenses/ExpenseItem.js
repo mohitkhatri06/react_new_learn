@@ -5,16 +5,18 @@ import { useState } from 'react';
 
 const ExpenseItem = (props) => {
    return (
-      <Card className='expense-item'>
-         <ExpenseDate date={props.date} />
-         <div className='expense-item__description'>
-            <h2>{props.title}</h2>
-            <div className='expense-item__price'>
-               {'\u20B9'}
-               {props.amount}
+      <li>
+         <Card className='expense-item'>
+            <ExpenseDate date={props.date} />
+            <div className='expense-item__description'>
+               <h2>{props.title}</h2>
+               <div className='expense-item__price'>
+                  {'\u20B9'}
+                  {props.amount}
+               </div>
             </div>
-         </div>
-      </Card>
+         </Card>
+      </li>
    );
 };
 
